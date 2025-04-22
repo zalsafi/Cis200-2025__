@@ -1,0 +1,108 @@
+Project 2 ChatGpt Convo and yt Videos credit
+dont give me the answer but help me with the logic of this prompt "constructor method should accept a board, ensure it's a valid checker board or print an error 
+
+ 
+
+include a function getMaxJumps() that returns the max number of jumps ANY white checker can go (for every white piece, calculate the maximum number of jumps it can go, return that max value)"
+ChatGPT said:
+To approach this prompt, let's break down the problem into manageable steps:
+
+1. Constructor Method
+The constructor method should accept a board. Here's how to think about it:
+
+Input Board: The board is presumably a 2D array, with each cell representing a square on the checkerboard. In most checkerboard configurations, a white checker is represented by W, and a black checker by B, while empty squares are often represented by E or something similar.
+
+Validate the Board:
+
+The board should have a valid size (usually an 8x8 grid for checkers).
+
+The checkerboard should alternate between black and white squares, with certain squares unoccupied (usually only white squares are used).
+
+You could validate the board by checking that it follows these rules:
+
+Ensure alternating colors for squares (e.g., (0,0) is white, (0,1) is black, etc.).
+
+Ensure there are no incorrect characters or positions.
+
+Error Handling: If the board is not valid, you should print an error or raise an exception depending on the design.
+
+2. Function getMaxJumps()
+Now let's think about the getMaxJumps() method, which should calculate the maximum number of jumps any white checker can make.
+
+Max Jumps for Each White Checker:
+
+Each white checker can jump over an adjacent black piece and land on an empty square directly after that black piece (following the rules of checkers).
+
+The direction of jumps is diagonal, typically both forward-left and forward-right.
+
+For each white piece, you need to:
+
+Check if it can jump over a black piece to an empty square.
+
+If it can, mark the position as "visited" or something similar to avoid revisiting the same square.
+
+Continue jumping over black pieces as long as possible.
+
+Approach:
+
+For each white checker on the board, check possible jumps.
+
+Use a recursive or iterative approach to count the number of jumps for each white piece, keeping track of the max jumps encountered during this process.
+
+General Flow:
+Constructor:
+
+Accept the board and ensure it's valid by checking dimensions, square colors, and the absence of invalid characters.
+
+getMaxJumps():
+
+Loop through each white piece on the board.
+
+For each white piece, calculate the maximum number of jumps it can make by exploring possible diagonal moves (check each diagonal direction).
+
+Keep track of the highest jump count.  for my varaibles in the private class, im using <vector<vector>charr>>board; can u help me with the second declaration, int = 8; ?
+ChatGPT said:
+It looks like you're trying to declare a 2D vector for your board and want to define a size, such as int = 8, possibly for the board's dimensions. I'll break this down for you.
+
+1. Declaring the 2D Vector board
+In C++, the syntax for declaring a 2D vector with char elements looks like this:
+
+cpp
+Copy
+std::vector<std::vector<char>> board;
+This will create a board that is a dynamic 2D array where each cell holds a char (such as 'W' for white, 'B' for black, or 'E' for empty).
+
+2. Initial Size Declaration for the Board
+If you're looking to initialize the board with a fixed size (for example, an 8x8 checkerboard), you can do that with the following syntax:
+
+cpp
+Copy
+int size = 8;  // This is the board size, commonly 8 for checkers.
+std::vector<std::vector<char>> board(size, std::vector<char>(size));
+This initializes board as an 8x8 grid, where each element is a char that you can later populate with 'W', 'B', or 'E'.
+
+Explanation of the Code:
+int size = 8; declares a variable size to represent the size of the board (8x8).
+
+std::vector<std::vector<char>> board(size, std::vector<char>(size)); initializes the 2D vector with size rows and size columns, where each cell is a char.
+
+3. Populating the Board
+After initializing the board, you can populate it with your checker pieces (e.g., 'W' for white, 'B' for black, 'E' for empty):
+
+cpp
+Copy
+for (int i = 0; i < size; i++) {
+    for (int j = 0; j < size; j++) {
+        if ((i + j) % 2 == 0) {
+            board[i][j] = 'E';  // Empty space
+        } else if (i < 3) {
+            board[i][j] = 'B';  // Black piece
+        } else if (i > 4) {
+            board[i][j] = 'W';  // White piece
+        } else {
+            board[i][j] = 'E';  // Empty space in the middle
+        }
+    }
+}.  
+yt videos i watched: https://www.youtube.com/watch?v=AiXccyupDeU
+https://www.youtube.com/watch?v=uMnh8ZlT88U

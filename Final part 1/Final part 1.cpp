@@ -43,6 +43,26 @@ public:
 	}
 	
 };
+class Game {
+private:
+	int hand = 1;
+	bool score;
+public:
+	Game(int hand, bool score) {
+		this->hand = hand;
+		this->score = score;
+	}
+
+	int getHand() {
+		return hand;
+	}
+	bool getScore() {
+		score = false;
+
+		return score;
+	}
+
+};
 Cards Deck[52];
 void shuffleDeck() {
 	int i, j;
@@ -54,12 +74,6 @@ void shuffleDeck() {
 		Deck[j] = temp;
 	}
 }
-
-class Game {
-
-private:
-	int hand = 1;
-};
 
 int main() {
 	srand(time(0));
@@ -75,9 +89,9 @@ int main() {
 		}
 	}
 
-	shuffleDeck(shoe);
+	shuffleDeck();
 
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 52; i++) {
 		shoe[i].printCard();
 	}
 

@@ -1,2 +1,11 @@
 ﻿  Final part 1.cpp
-  Final part 1.vcxproj -> C:\Users\zalsa\OneDrive\Documents\Visual Studio 2022\Cis200-2025\Final part 1\x64\Debug\Final part 1.exe
+C:\Users\zalsa\OneDrive\Documents\Visual Studio 2022\Cis200-2025\Final part 1\Final part 1.cpp(46,7): error C2512: 'Cards': no appropriate default constructor available
+      C:\Users\zalsa\OneDrive\Documents\Visual Studio 2022\Cis200-2025\Final part 1\Final part 1.cpp(8,7):
+      see declaration of 'Cards'
+  
+C:\Users\zalsa\OneDrive\Documents\Visual Studio 2022\Cis200-2025\Final part 1\Final part 1.cpp(47,19): error C2065: 'i': undeclared identifier
+C:\Users\zalsa\OneDrive\Documents\Visual Studio 2022\Cis200-2025\Final part 1\Final part 1.cpp(47,12): error C2512: 'Cards': no appropriate default constructor available
+      C:\Users\zalsa\OneDrive\Documents\Visual Studio 2022\Cis200-2025\Final part 1\Final part 1.cpp(8,7):
+      see declaration of 'Cards'
+  
+C:\Users\zalsa\OneDrive\Documents\Visual Studio 2022\Cis200-2025\Final part 1\Final part 1.cpp(58,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data

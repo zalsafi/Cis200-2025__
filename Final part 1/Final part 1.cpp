@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 
 class Cards {
@@ -42,8 +43,26 @@ public:
 	}
 	
 };
+Cards Deck[52];
+void shuffleDeck() {
+	int i, j;
+	for (i = 0; i < 100; i++) {
+		j = rand() % 52;
+
+		Cards temp = Deck[i];
+		Deck[i] = Deck[j];
+		Deck[j] = temp;
+	}
+}
+
+class Game {
+
+private:
+	int hand = 1;
+};
 
 int main() {
+	srand(time(0));
 	vector<Cards> shoe;
 	string suit[4] = { "Hearts", "Diamonds", "Clubs", "Spades" };
 
@@ -56,7 +75,8 @@ int main() {
 		}
 	}
 
-	
+	shuffleDeck(shoe);
+
 	for (int i = 0; i < 5; i++) {
 		shoe[i].printCard();
 	}

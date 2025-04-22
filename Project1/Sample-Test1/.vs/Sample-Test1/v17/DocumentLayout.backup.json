@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zalsa\\OneDrive\\Documents\\Visual Studio 2022\\Cis200-2025\\Sample-Test1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C9EDB89-F522-4500-809C-5C8BA01E151E}|Sample-Test1.vcxproj|C:\\Users\\zalsa\\OneDrive\\Documents\\Visual Studio 2022\\Cis200-2025\\Sample-Test1\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4C9EDB89-F522-4500-809C-5C8BA01E151E}|Sample-Test1.vcxproj|solutionrelative:test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.cpp",
+              "DocumentMoniker": "C:\\Users\\zalsa\\OneDrive\\Documents\\Visual Studio 2022\\Cis200-2025\\Sample-Test1\\test.cpp",
+              "RelativeDocumentMoniker": "test.cpp",
+              "ToolTip": "C:\\Users\\zalsa\\OneDrive\\Documents\\Visual Studio 2022\\Cis200-2025\\Sample-Test1\\test.cpp",
+              "RelativeToolTip": "test.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-18T16:33:26.585Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

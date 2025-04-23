@@ -43,6 +43,7 @@ public:
 	}
 	
 };
+
 class Game {
 private:
 	int hand = 1;
@@ -58,20 +59,19 @@ public:
 	}
 	bool getScore() {
 		score = false;
-
 		return score;
 	}
 
 };
-Cards Deck[52];
-void shuffleDeck() {
-	int i, j;
-	for (i = 0; i < 100; i++) {
-		j = rand() % 52;
 
-		Cards temp = Deck[i];
-		Deck[i] = Deck[j];
-		Deck[j] = temp;
+void shuffleDeck(vector<Cards>shoe) {
+	int i, j;
+	for (i = 0; i < shoe.size(); i++) {
+		j = rand() % shoe.size();
+
+		Cards temp = shoe[i];
+		shoe[i] = shoe[j];
+		shoe[j] = temp;
 	}
 }
 
@@ -80,7 +80,6 @@ int main() {
 	vector<Cards> shoe;
 	string suit[4] = { "Hearts", "Diamonds", "Clubs", "Spades" };
 
-	
 	for (int i = 0; i < 6; i++) {
 		for (int j = 0; j < 4; j++) {
 			for (int k = 1; k <= 13; k++) {
@@ -89,11 +88,15 @@ int main() {
 		}
 	}
 
-	shuffleDeck();
+	shuffleDeck(shoe);
+	if (shoe.size() < 100) {
+		shuffleDeck(shoe);
+		cout << "Reshuffling deck..." << endl;
+	} 
 
-	for (int i = 0; i < 52; i++) {
+	for (int i = 0; i < shoe.size(); i++) {
 		shoe[i].printCard();
 	}
-
 	return 0;
+
 }

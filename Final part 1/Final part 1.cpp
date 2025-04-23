@@ -58,10 +58,11 @@ public:
 		return hand;
 	}
 	bool getScore() {
-		score = false;
 		return score;
 	}
-
+	void nextHand() {
+		hand++;
+	}
 };
 
 void shuffleDeck(vector<Cards>shoe) {
